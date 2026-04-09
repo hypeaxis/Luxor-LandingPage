@@ -1,17 +1,16 @@
 /* Dark mode CSS variables (activate by adding `.dark` on <html> or <body>) */
 
 .dark {
-    --background: #0c0c0e;
-    --foreground: #ffffff;
-    --background-gradient: linear-gradient(0deg, #0c0c0e, #0c0c0e),
-        linear-gradient(171.23deg, rgba(140, 248, 210, 0.08) 3.76%, rgba(12, 12, 14, 0.12) 42.56%, rgba(135, 245, 206, 0.4) 118.97%);
+    --background: #0C0C0E;
+    --foreground: #FFFFFF;
+    --background-gradient: linear-gradient(171.23deg, rgba(140, 248, 210, 0.08) 3.76%, rgba(12, 12, 14, 0.12) 42.56%, rgba(135, 245, 206, 0.40) 118.97%);
     --primary-gradient: linear-gradient(90deg, #87f5ce 0%, #41bdc7 100%);
     --card: oklch(0.21 0.006 285.885);
     --card-foreground: oklch(0.985 0 0);
     --popover: oklch(0.21 0.006 285.885);
     --popover-foreground: oklch(0.985 0 0);
-    --primary: oklch(0.92 0.004 286.32);
-    --primary-foreground: oklch(0.21 0.006 285.885);
+    --primary: #87F5CE;
+    --primary-foreground: #000000;
     --secondary: oklch(0.274 0.006 286.033);
     --secondary-foreground: oklch(0.985 0 0);
     --muted: oklch(0.274 0.006 286.033);
@@ -19,7 +18,7 @@
     --accent: oklch(0.274 0.006 286.033);
     --accent-foreground: oklch(0.985 0 0);
     --destructive: oklch(0.704 0.191 22.216);
-    --border: oklch(1 0 0 / 10%);
+    --border: #87F5CEB2;
     --input: oklch(1 0 0 / 15%);
     --ring: oklch(0.552 0.016 285.938);
     --chart-1: oklch(0.488 0.243 264.376);
@@ -35,4 +34,5 @@
     --sidebar-accent-foreground: oklch(0.985 0 0);
     --sidebar-border: oklch(1 0 0 / 10%);
     --sidebar-ring: oklch(0.552 0.016 285.938);
+    --caption: #777777;
 }

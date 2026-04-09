@@ -7,9 +7,9 @@
     body {
         @apply bg-background text-foreground antialiased;
         background-image: var(--background-gradient, none);
-        background-size: cover;
+        background-size: 100% 100%;
         background-repeat: no-repeat;
-        background-attachment: fixed;
+        background-attachment: scroll;
     }
     button {
         cursor: pointer;

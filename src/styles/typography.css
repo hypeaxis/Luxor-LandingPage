@@ -2,25 +2,25 @@
 
 @layer base {
     h1 {
-        @apply font-bold leading-[1] tracking-[0] text-white mobile:text-4xl tablet:text-5xl desktop:text-[64px];
+        @apply font-bold leading-tight tracking-tight mobile:text-3xl tablet:text-4xl desktop:text-[4rem];
     }
     h2 {
-        @apply font-bold leading-[1] tracking-[0] text-white mobile:text-3xl tablet:text-4xl desktop:text-[40px];
+        @apply font-bold leading-tight tracking-tight mobile:text-2xl tablet:text-3xl desktop:text-[2.5rem];
     }
     h3 {
-        @apply font-bold leading-[1] tracking-[0] text-white mobile:text-2xl tablet:text-[26px] desktop:text-[28px];
+        @apply font-normal leading-none tracking-tight mobile:text-xl tablet:text-2xl desktop:text-[2rem];
     }
     h4 {
-        @apply font-bold leading-[24px] tracking-[-0.2px] text-white mobile:text-base tablet:text-[16px] desktop:text-[16px];
+        @apply font-normal leading-tight tracking-tight mobile:text-lg tablet:text-xl desktop:text-[1rem];
     }
     h5 {
-        @apply font-medium leading-normal tracking-tight mobile:text-base tablet:text-lg desktop:text-xl;
+        @apply font-semibold leading-normal tracking-tight mobile:text-base tablet:text-lg desktop:text-2xl;
     }
     h6 {
-        @apply font-medium uppercase tracking-wide mobile:text-sm tablet:text-base desktop:text-lg;
+        @apply font-normal tracking-wide mobile:text-sm tablet:text-base desktop:text-xl;
     }
     p {
-        @apply font-normal leading-[1] tracking-[0] text-white/90 mobile:text-base tablet:text-lg desktop:text-[20px];
+        @apply mobile:text-sm text-base;
     }
 }
 
