@@ -23,8 +23,14 @@ export default function StepsSection() {
                 <h2 className="mb-[81px] text-center" data-aos="fade-up">Smart Liquidity, Simple Steps</h2>
                 <div className="grid w-full grid-cols-1 justify-items-center gap-[24px] md:grid-cols-3">
                     {stepItems.map((item, index) => (
-                        <div key={item.number} data-aos="flip-up" data-aos-offset={100 + index * 200} data-aos-easing="ease-in-sine" className="group flex min-h-[292px] w-full max-w-[384px] flex-col items-start justify-center rounded-[8px] border border-[#87F5CE]/30 bg-[#1C2726] p-[36px] md:h-[292px]">
-                            <div className="flex h-auto w-full flex-col items-start gap-[24px] md:h-[173px]">
+                        <div 
+                            key={item.number} 
+                            data-aos="flip-up" 
+                            data-aos-offset={100 + index * 200} 
+                            data-aos-easing="ease-in-sine" 
+                            className="group flex h-full min-h-[292px] w-full max-w-[384px] flex-col items-start justify-start rounded-[8px] border border-[#87F5CE]/30 bg-[#1C2726] p-[36px]"
+                        >
+                            <div className="flex h-auto w-full flex-col items-start gap-[24px]">
                                 <div
                                     className="text-[64px] font-[800] leading-none"
                                     style={{
