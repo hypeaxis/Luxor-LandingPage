@@ -48,8 +48,8 @@ export default function Footer() {
                     <div className="text-sm text-white/60">&copy; 2025 Luxor</div>
                 </div>
                 <div className="flex w-full max-w-[547px] flex-wrap items-start justify-between gap-8 md:flex-nowrap md:gap-0">
-                    {footerLinkGroups.map((group, index) => (
-                        <div key={group.title} data-aos="slide-up" data-aos-offset={100 + index * 100}>
+                    {footerLinkGroups.map((group) => (
+                        <div key={group.title}>
                             <h4>{group.title}</h4>
                             <ul className="mt-3 flex flex-col gap-[12px]">
                                 {group.links.map((link) => (
