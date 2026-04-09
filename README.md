@@ -1,4 +1,4 @@
-# ezsol-frontend
+# Luxor-frontend
 
 Frontend template built with Next.js 15, React 19, TypeScript, Tailwind CSS 4, and shadcn/ui.
 
