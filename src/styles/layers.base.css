@@ -1,0 +1,17 @@
+/* Base layer: element resets and global applies */
+
+@layer base {
+    * {
+        @apply border-border outline-ring/50;
+    }
+    body {
+        @apply bg-background text-foreground antialiased;
+        background-image: var(--background-gradient, none);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    button {
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,19 @@
+@layer utilities {
+    .border-gradient-mint {
+        position: relative;
+        border: none;
+    }
+    
+    .border-gradient-mint::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit; /* Giữ nguyên độ bo góc của nút */
+        padding: 1px; /* Tương đương với border: 1px solid */
+        background: linear-gradient(90deg, #87F5CE 0%, #41BDC7 119.32%); /* Mã màu và % chính xác từ thiết kế */
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        pointer-events: none; 
+    }
+}
