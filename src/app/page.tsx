@@ -12,7 +12,7 @@ export default function Home() {
             </div>
 
             {/* Header */}
-            <header className="top-6 z-[100] mx-auto max-w-[1440px] px-4 md:px-8">
+            <header className="relative z-[100] mx-auto mt-10 max-w-[1440px] px-4 md:px-8">
                 <div className="flex h-[72px] items-center justify-between rounded-full bg-gradient-to-r from-[#172421] via-[#0E1514] to-[#0C0C0E] border border-white/10 px-6 md:px-8 shadow-lg">
                     <div className="flex flex-1 items-center">
                         <Link href="#top">
