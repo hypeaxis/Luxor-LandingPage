@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ezsol-frontend
+
+Frontend template built with Next.js 15, React 19, TypeScript, Tailwind CSS 4, and shadcn/ui.
+
+## Overview
+
+Project highlights:
+- App Router architecture (Next.js)
+- Dark/Light mode with next-themes
+- Scroll animation with AOS
+- Jotai for state management
+- Reusable UI components (shadcn/ui + Radix UI)
+
+## Tech Stack
+
+- Next.js 15
+- React 19
+- TypeScript
+- Tailwind CSS 4
+- shadcn/ui
+- next-themes
+- Jotai
+- AOS
+- react-toastify
 
 ## Getting Started
 
-First, run the development server:
+Requirements:
+- Node.js 18+
+- npm (or yarn/pnpm/bun)
+
+Install and run:
+
+```bash
+npm install
+npm run dev
+```
+
+Open http://localhost:3000
+
+## Scripts
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run build
+npm start
+npm run lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+src/
+  app/           # Next.js App Router pages and layout
+  components/    # Shared components and providers
+  layout/        # Header/Footer/layout wrappers
+  view/          # Landing page sections
+  styles/        # Theme, variables, typography, css layers
+  lib/           # Utilities
+  constant/      # Constants and metadata
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+public/
+  assets/        # Static images and assets
+```
 
-## Learn More
+## Configuration Notes
 
-To learn more about Next.js, take a look at the following resources:
+- Theme variables:
+  - src/styles/variables.dark.css
+  - src/styles/variables.light.css
+- App metadata:
+  - src/constant/metadata.ts
+- Main page composition:
+  - src/app/page.tsx
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Troubleshooting
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Port 3000 already in use:
 
-## Deploy on Vercel
+```bash
+npm run dev -- -p 3001
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Dependency issues:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+rm -rf node_modules package-lock.json
+npm install
+```
+
+## Documentation
+
+- docs/UI_Guide_Instruction.md
+- github/copilot-instructions.md
