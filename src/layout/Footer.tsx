@@ -1,14 +1,24 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+const footerLinkGroups = [
+    {
+        title: 'COMMUNITY',
+        links: ['Twitter', 'Telegram', 'Discord'],
+    },
+    {
+        title: 'Documentation',
+        links: ['User Docs', 'Technical Docs', 'Legal', 'Brand Assets'],
+    },
+    {
+        title: 'Security',
+        links: ['Audit', 'Bug Bounty', 'Terms of Use', 'Privacy Policy'],
+    },
+] as const;
+
 export default function Footer() {
     return (
-        <footer
-            className="flex w-full flex-col items-center"
-            style={{
-                background: 'linear-gradient(171.23deg, rgba(140, 248, 210, 0.08) 3.76%, rgba(12, 12, 14, 0.12) 42.56%, rgba(135, 245, 206, 0.4) 118.97%)',
-            }}
-        >
+        <footer className="flex w-full flex-col items-center">
             <section className="mx-auto flex w-full max-w-[1440px] items-center justify-center px-4 py-12 lg:px-[120px] lg:py-20">
                 <div className="w-full max-w-[1200px] rounded-[8px] bg-gradient-to-b from-[rgba(140,248,210,0)] to-[#41BDC7] p-[1px] lg:h-[500px]">
                     <div className="relative flex h-full w-full flex-col items-center justify-between overflow-hidden rounded-[7px] bg-gradient-to-b from-[rgba(7,7,7,0)] to-[rgba(0,0,0,0.2)] px-4 py-12 lg:px-[259px] lg:py-[112px]">
@@ -17,7 +27,7 @@ export default function Footer() {
                                 src="/assets/Mask group.png"
                                 alt="Deploy Liquidity Background"
                                 fill
-                                className="object-cover object-center opacity-90"
+                                className="object-cover object-center opacity-100"
                                 quality={100}
                             />
                         </div>
@@ -33,83 +43,25 @@ export default function Footer() {
             </section>
 
             <div className="mx-auto flex w-full max-w-[1440px] flex-col justify-between gap-12 px-4 pb-[60px] pt-[80px] md:flex-row lg:px-[120px]">
-                <div className="flex h-[168px] w-[212px] shrink-0 flex-col justify-between">
+                <div className="flex w-full max-w-[212px] shrink-0 flex-col justify-between gap-4 md:h-[168px] md:w-[212px] md:gap-0">
                     <img src="/logo/logo-02.png" className="h-[46] w-[212px]" alt="Luxor Logo" />
                     <div className="text-sm text-white/60">&copy; 2025 Luxor</div>
                 </div>
-                <div className="flex w-full max-w-[547px] flex-wrap justify-between gap-8 md:h-[168px] md:flex-nowrap md:gap-0">
-                    <div>
-                        <h4 className="uppercase">COMMUNITY</h4>
-                        <ul className="flex flex-col gap-[12px]">
-                            <li>
-                                <Link href="#" className="text-sm text-[#8CF8D2] transition-colors hover:text-white">
-                                    Twitter
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="#" className="text-sm text-[#8CF8D2] transition-colors hover:text-white">
-                                    Telegram
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="#" className="text-sm text-[#8CF8D2] transition-colors hover:text-white">
-                                    Discord
-                                </Link>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h4>Documentation</h4>
-                        <ul className="flex flex-col gap-[12px]">
-                            <li>
-                                <Link href="#" className="text-sm text-[#8CF8D2] transition-colors hover:text-white">
-                                    User Docs
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="#" className="text-sm text-[#8CF8D2] transition-colors hover:text-white">
-                                    Technical Docs
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="#" className="text-sm text-[#8CF8D2] transition-colors hover:text-white">
-                                    Legal
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="#" className="text-sm text-[#8CF8D2] transition-colors hover:text-white">
-                                    Brand Assets
-                                </Link>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h4>Security</h4>
-                        <ul className="flex flex-col gap-[12px]">
-                            <li>
-                                <Link href="#" className="text-sm text-[#8CF8D2] transition-colors hover:text-white">
-                                    Audit
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="#" className="text-sm text-[#8CF8D2] transition-colors hover:text-white">
-                                    Bug Bounty
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="#" className="text-sm text-[#8CF8D2] transition-colors hover:text-white">
-                                    Terms of Use
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="#" className="text-sm text-[#8CF8D2] transition-colors hover:text-white">
-                                    Privacy Policy
-                                </Link>
-                            </li>
-                        </ul>
-                    </div>
+                <div className="flex w-full max-w-[547px] flex-wrap items-start justify-between gap-8 md:flex-nowrap md:gap-0">
+                    {footerLinkGroups.map((group) => (
+                        <div key={group.title}>
+                            <h4>{group.title}</h4>
+                            <ul className="mt-3 flex flex-col gap-[12px]">
+                                {group.links.map((link) => (
+                                    <li key={link}>
+                                        <Link href="#" className="text-sm text-[#8CF8D2] transition-colors hover:text-white">
+                                            {link}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
                 </div>
             </div>
         </footer>
