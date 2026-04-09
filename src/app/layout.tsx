@@ -2,8 +2,10 @@ import type { Metadata } from 'next';
 import Script from 'next/script';
 import { Albert_Sans, Geist_Mono } from 'next/font/google';
 import './globals.css';
+import 'aos/dist/aos.css';
 import { BugIcon } from 'lucide-react';
 import Link from 'next/link';
+import AOSProvider from 'src/components/aos-provider/AOSProvider';
 import { ThemeProvider } from 'src/components/theme-provider/ThemeProvider';
 import JotaiProvider from 'src/components/jotai-provider/JotaiProvider';
 import { ToastContainer } from 'react-toastify';
@@ -97,7 +99,9 @@ export default function RootLayout({
             </head>
             <body className={`${albertSans.className} ${geistMono.variable} antialiased`}>
                 <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
-                    <JotaiProvider>{children}</JotaiProvider>
+                    <AOSProvider>
+                        <JotaiProvider>{children}</JotaiProvider>
+                    </AOSProvider>
                     {process.env.NODE_ENV === 'development' && (
                         <div style={{ position: 'fixed', bottom: 16, right: 16, cursor: 'pointer' }}>
                             <Link href="/assets/typography" title="Typography Test Page">
